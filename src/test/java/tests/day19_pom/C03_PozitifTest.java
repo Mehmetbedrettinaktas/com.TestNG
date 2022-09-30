@@ -1,4 +1,4 @@
-package tests.day18_pageObject;
+package tests.day19_pom;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -8,9 +8,9 @@ import pages.HotelmycampPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class C03_ConfigReader {
+public class C03_PozitifTest {
     @Test
-    public void test01() throws InterruptedException {
+    public void pozitifTest() throws InterruptedException {
         // Bir Class olustur : PositiveTest
         //2) Bir test method olustur positiveLoginTest()
         // https://www.hotelmycamp.com/ adresine git  login butonuna bas
@@ -23,20 +23,19 @@ public class C03_ConfigReader {
         Driver.getDriver().get(ConfigReader.getProperty("hotelmycampUrl"));
         Thread.sleep(3000);
         hotelmycampPage.logIn.click();
-      //test data username: manager ,  test data password : Manager1!
-      hotelmycampPage.userName.sendKeys(ConfigReader.getProperty("hmcUserName"));
+        //test data username: manager ,  test data password : Manager1!
+        hotelmycampPage.userName.sendKeys(ConfigReader.getProperty("hmcUserName"));
 
-      // obje ile
-      // hotelmycampPage.password.sendKeys(ConfigReader.getProperty("hmcPassword"));
-     // hotelmycampPage.btnSubmit.click();
+        // obje ile
+        // hotelmycampPage.password.sendKeys(ConfigReader.getProperty("hmcPassword"));
+        // hotelmycampPage.btnSubmit.click();
 
         // actions ile
-      actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("hmcPassword"))
-              .sendKeys(Keys.ENTER).perform();
+        actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("hmcPassword"))
+                .sendKeys(Keys.ENTER).perform();
 
-      //Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
-       Assert.assertTrue(hotelmycampPage.girildiYaziElementi.isDisplayed());
-       Driver.closeDriver();
-
+        //Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
+        Assert.assertTrue(hotelmycampPage.girildiYaziElementi.isDisplayed());
+        Driver.closeDriver();
     }
 }

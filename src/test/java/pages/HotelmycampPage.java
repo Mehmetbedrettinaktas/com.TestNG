@@ -20,6 +20,12 @@ public class HotelmycampPage {
 
     @FindBy(id = "btnSubmit")
     public WebElement btnSubmit;
-    @FindBy (xpath = "//span[text()='ListOfUsers']")
+    @FindBy (xpath = "//span[@class='username username-hide-on-mobile']")
     public WebElement girildiYaziElementi;
+
+    @FindBy (xpath = "//*[text()='Username or password is incorrect, please correct them and try again']")
+    public WebElement girisyapilamadi;
+
+
+
 }
