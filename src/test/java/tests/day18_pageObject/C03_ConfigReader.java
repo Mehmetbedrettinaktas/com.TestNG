@@ -15,12 +15,13 @@ public class C03_ConfigReader {
         HotelmycampPage hotelmycampPage= new HotelmycampPage();
         Driver.getDriver().get(ConfigReader.getProperty("hotelmycampUrl"));
         hotelmycampPage.logIn.click();
-        //test data username: manager ,  test data password : Manager1!
-        hotelmycampPage.userName.sendKeys(ConfigReader.getProperty("hotelmycampUsername"));
-        hotelmycampPage.password.sendKeys(ConfigReader.getProperty("hotelmycampPassword"));
-        hotelmycampPage.btnSubmit.click();
-        //Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
-        Assert.assertTrue(hotelmycampPage.girildiYaziElementi.isDisplayed());
+      //test data username: manager ,  test data password : Manager1!
+      hotelmycampPage.userName.sendKeys(ConfigReader.getProperty("hotelmycampUsername"));
+      hotelmycampPage.password.sendKeys(ConfigReader.getProperty("hotelmycampPassword"));
+      hotelmycampPage.btnSubmit.click();
+      //Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
+      Assert.assertTrue(hotelmycampPage.girildiYaziElementi.isDisplayed());
+      Driver.closeDriver();
 
     }
 }
