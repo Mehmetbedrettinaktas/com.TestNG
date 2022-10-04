@@ -1,4 +1,4 @@
-package utilities;
+package tests.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -19,7 +19,7 @@ public abstract class TastBaseBeforeClassAfterClass {
     protected String tarih;
 
     // @BeforeClass ve @AfterClass notasyonlarını TestNG de kullanırken JUnit'teki gibi static yapmaya gerek yoktur
-    @BeforeClass
+    @BeforeClass(groups = {"group1","group2"})
     public  void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -32,9 +32,9 @@ public abstract class TastBaseBeforeClassAfterClass {
          tarih= date.format(formater);
     }
 
-    @AfterClass
+    @AfterClass(groups = {"group1","group2"})
     public  void tearDown() {
          driver.close();
-        // driver.quit();
+         driver.quit();
     }
 }

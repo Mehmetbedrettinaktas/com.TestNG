@@ -1,8 +1,8 @@
 package tests.day18_pageObject;
 
 import org.testng.annotations.Test;
-import utilities.ConfigReader;
-import utilities.Driver;
+import tests.utilities.ConfigReader;
+import tests.utilities.Driver;
 
 public class C02_ConfigReader {
     @Test

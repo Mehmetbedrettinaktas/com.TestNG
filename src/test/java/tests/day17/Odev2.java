@@ -1,6 +1,6 @@
 package tests.day17;
 
-import utilities.TestBaseBeforeAfterMethod;
+import tests.utilities.TestBaseBeforeAfterMethod;
 
 public class Odev2 extends TestBaseBeforeAfterMethod {
     // 1. “http://zero.webappsecurity.com/” Adresine gidin

@@ -5,9 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utilities.TestBaseBeforeAfterMethod;
-
-import static org.testng.TestRunner.PriorityWeight.dependsOnMethods;
+import tests.utilities.TestBaseBeforeAfterMethod;
 
 public class C04_DepensOnMethod extends TestBaseBeforeAfterMethod {
     @Test

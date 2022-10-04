@@ -1,4 +1,4 @@
-package utilities;
+package tests.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -52,7 +52,7 @@ public class Driver {
             }
 
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+
 
         }
         driver.manage().window().maximize();

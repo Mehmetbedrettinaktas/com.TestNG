@@ -5,7 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utilities.TestBaseBeforeAfterMethod;
+import tests.utilities.TestBaseBeforeAfterMethod;
 
 public class C02_SoftAssert extends TestBaseBeforeAfterMethod {
     // Hard Assertions : JUNit'te öğrendiğimiz assertion ile aynıdır.
@@ -18,7 +18,7 @@ public class C02_SoftAssert extends TestBaseBeforeAfterMethod {
     // çalışmaya devam eder, en sonra rapor verir.
     // baslangıc  SoftAssert objeadı=new SoftAssert();  bitis objeadı.assertAll();
 
-    @Test
+    @Test(groups = "group1")
     public void test01() {
         //1-amazon anasayfaya gidin
         driver.get("https://www.amazon.com");

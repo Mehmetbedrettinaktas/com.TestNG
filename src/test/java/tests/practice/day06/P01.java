@@ -3,7 +3,7 @@ package tests.practice.day06;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import pages.DhtmlgoodiesPage;
-import utilities.Driver;
+import tests.utilities.Driver;
 
 public class P01 {
     @Test

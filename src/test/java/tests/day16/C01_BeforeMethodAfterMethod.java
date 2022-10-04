@@ -1,7 +1,7 @@
 package tests.day16;
 
 import org.testng.annotations.Test;
-import utilities.TestBaseBeforeAfterMethod;
+import tests.utilities.TestBaseBeforeAfterMethod;
 
 public class C01_BeforeMethodAfterMethod extends TestBaseBeforeAfterMethod {
     @Test
@@ -10,7 +10,7 @@ public class C01_BeforeMethodAfterMethod extends TestBaseBeforeAfterMethod {
 
     }
 
-    @Test
+    @Test(groups = "group1")
     public void bestBuyTesti() {
         driver.get("https://www.testbuy.com");
     }

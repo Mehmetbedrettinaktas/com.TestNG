@@ -1,4 +1,4 @@
-package utilities;
+package tests.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +18,7 @@ public abstract class TestBaseBeforeAfterMethod {
     // TestNG framework'unde before ve after notasyonlari yerine
     // @BeforeMethod ve @AfterMetyhod kullanilir
     // Calisma prensibi Junit'deki before-after ile aynidir
-    @BeforeMethod
+    @BeforeMethod(groups ={"group1","group2"})
     public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -30,10 +30,10 @@ public abstract class TestBaseBeforeAfterMethod {
         DateTimeFormatter formater=DateTimeFormatter.ofPattern("YYMMddHHmmss");
         tarih= date.format(formater);
     }
-    @AfterMethod
+    @AfterMethod(groups = {"group1","group2"})
     public void tearDown(){
        // driver.close();
-         //driver.quit();
+         driver.quit();
 
 
     }

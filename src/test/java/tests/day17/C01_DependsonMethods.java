@@ -1,9 +1,7 @@
 package tests.day17;
 
 import org.testng.annotations.Test;
-import utilities.TestBaseBeforeAfterMethod;
-
-import static org.testng.TestRunner.PriorityWeight.dependsOnMethods;
+import tests.utilities.TestBaseBeforeAfterMethod;
 
 public class C01_DependsonMethods extends TestBaseBeforeAfterMethod {
     @Test

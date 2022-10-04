@@ -1,7 +1,7 @@
 package tests.day16;
 
 import org.testng.annotations.Test;
-import utilities.TestBaseBeforeAfterMethod;
+import tests.utilities.TestBaseBeforeAfterMethod;
 
 public class Odev extends TestBaseBeforeAfterMethod {
     // 1) Bir class oluşturun: YoutubeAssertions

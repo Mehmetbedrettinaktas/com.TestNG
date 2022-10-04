@@ -3,7 +3,7 @@ package tests.team;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utilities.TestBaseBeforeAfterMethod;
+import tests.utilities.TestBaseBeforeAfterMethod;
 
 public class P01 extends TestBaseBeforeAfterMethod {
     @Test

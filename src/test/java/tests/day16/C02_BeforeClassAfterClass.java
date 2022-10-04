@@ -1,7 +1,7 @@
 package tests.day16;
 
 import org.testng.annotations.Test;
-import utilities.TastBaseBeforeClassAfterClass;
+import tests.utilities.TastBaseBeforeClassAfterClass;
 
 public class C02_BeforeClassAfterClass extends TastBaseBeforeClassAfterClass {
 

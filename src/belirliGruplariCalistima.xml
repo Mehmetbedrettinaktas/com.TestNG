@@ -1,0 +1,37 @@
+<!--
+xml dosayasinda belirli methodlari gruplayip calistrimak istersek
+oncelikle grruplandirmak istedigimiz methodlari belirtmek gerekkir test
+mutasyonundan sonra parentez acip grup ismi belirtmemiz gerekiyor.
+.xml dosyasinda test tag'indan sonra groups tag'in altinda
+run tagi icine  gruplandirdigimiz methodlarin grup ismi belirtmemiz gerekiyor.
+Ve son olarak gruplandirdigimiz methodlarin hangi package altinda oldugunu belirtmemiz
+gerekir.
+
+ <include name="group2"/>  day18
+-->
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="istenen gruplari calistirma">
+    <test name="Belirli gruplar">
+        <groups>
+            <run>
+                <include name="group1"/>
+
+
+            </run>
+        </groups>
+        <packages>
+            <package name="tests.day16"/>
+            <package name="tests.day17"/>
+        </packages>
+    </test>
+    <test name="Belirli gruplar">
+        <groups>
+            <run>
+                <exclude name="group2"/> <!-- group2 haric butun projeyi calistir-->
+            </run>
+        </groups>
+        <packages>
+            <package name="tests.day18_pageObject"/>
+        </packages>
+    </test>
+</suite>

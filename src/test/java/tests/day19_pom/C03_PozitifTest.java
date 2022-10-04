@@ -5,8 +5,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HotelmycampPage;
-import utilities.ConfigReader;
-import utilities.Driver;
+import tests.utilities.ConfigReader;
+import tests.utilities.Driver;
 
 public class C03_PozitifTest {
     @Test

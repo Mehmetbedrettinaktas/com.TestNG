@@ -5,8 +5,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HotelmycampPage;
-import utilities.ConfigReader;
-import utilities.Driver;
+import tests.utilities.ConfigReader;
+import tests.utilities.Driver;
 
 public class C02_NegatifTest {
     @Test
@@ -26,7 +26,7 @@ public class C02_NegatifTest {
         actions.sendKeys(Keys.TAB).sendKeys(ConfigReader.getProperty("hcmWrongPassword"))
                 .sendKeys(Keys.ENTER).perform();
         //Degerleri girildiginde sayfaya girilemedigini test et
-        Assert.assertTrue(hotelmycampPage.girisyapilamadi.isDisplayed());
+        Assert.assertTrue(hotelmycampPage.girilmediYaziElementi.isDisplayed());
         Driver.closeDriver();
 
     }

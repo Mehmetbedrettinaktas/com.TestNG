@@ -1,7 +1,7 @@
 package tests.day17;
 
 import org.testng.annotations.Test;
-import utilities.TestBaseBeforeAfterMethod;
+import tests.utilities.TestBaseBeforeAfterMethod;
 
 public class Odev extends TestBaseBeforeAfterMethod {
     @Test
