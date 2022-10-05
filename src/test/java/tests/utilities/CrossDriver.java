@@ -10,22 +10,19 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
 
-public class Driver {
-    private Driver(){
+public class CrossDriver {
+    private CrossDriver(){
 
     }
     static WebDriver driver;
-
-    /*
-    testlerimizi calistirdigimizda her seferinde yeni driver olusturdugu icin her est methodu
-    icin yeni bir pencere()driver aciliyor. Eger driver'a bir deger atanmissa yani driver==null ise
-    bir kere driver'i calistir diyerek bir kere if icin calistiracak. ve driver artik bir kere
-    calistigi icin ve deger atandigi icin null olmayacak ve direk return edecek ve diger
-    testlerimiz ayni pencere (driver) uzerinde calisacak
-     */
-    public static WebDriver getDriver() {
-        if (driver == null) {
-            switch (ConfigReader.getProperty("browser")){
+    public static WebDriver getDriver(String browser) {
+        //Eger browser'a bir deger atanmamissa properties deki browser kullanilir.
+        browser=(browser== null )? ConfigReader.getProperty("browser"):browser;
+        //testlerimizi xml file'dan farkli farkli browser ile calistirabilmek icin getDriver() methoduna parametre
+        // atamamiz gerekir
+        if (driver == null) { // CrossDriver icin gonderdigimiz browser uzerinden calismasi icin buraya
+            // parametre olarak girdigimiz degeri yazdik.
+            switch (browser){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
