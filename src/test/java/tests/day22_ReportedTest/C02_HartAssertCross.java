@@ -1,11 +1,11 @@
-package tests.day22;
+package tests.day22_ReportedTest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import tests.utilities.TestBaseBeforeAfterMethod;
+import tests.utilities.Driver;
 import tests.utilities.TestBaseCross;
 
 public class C02_HartAssertCross extends TestBaseCross {
@@ -36,5 +36,6 @@ public class C02_HartAssertCross extends TestBaseCross {
 
         //6-arama sonucunun Nutella içerdigini test edin
         Assert.assertTrue(resultWE.getText().contains("Nutella"));
+        Driver.closeDriver();
     }
 }

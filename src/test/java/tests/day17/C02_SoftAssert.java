@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import tests.utilities.Driver;
 import tests.utilities.TestBaseBeforeAfterMethod;
 
 public class C02_SoftAssert extends TestBaseBeforeAfterMethod {
@@ -35,5 +36,6 @@ public class C02_SoftAssert extends TestBaseBeforeAfterMethod {
 
         //6-arama sonucunun Nutella içerdigini test edin
         Assert.assertTrue(resultWE.getText().contains("Nutella"));
+        Driver.closeDriver();
     }
 }

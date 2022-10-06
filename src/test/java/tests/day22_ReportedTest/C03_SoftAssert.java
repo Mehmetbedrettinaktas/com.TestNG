@@ -1,11 +1,10 @@
-package tests.day22;
+package tests.day22_ReportedTest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import tests.utilities.TestBaseBeforeAfterMethod;
 import tests.utilities.TestBaseCross;
 
 public class C03_SoftAssert extends TestBaseCross {

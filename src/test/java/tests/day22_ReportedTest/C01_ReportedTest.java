@@ -1,4 +1,4 @@
-package tests.day22;
+package tests.day22_ReportedTest;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -47,6 +47,7 @@ public class C01_ReportedTest extends TestBaseRapor {
         String expectedUserName="John Walker";
         Assert.assertEquals(expectedUserName,actulUserName);
         extentTest.pass("basirili bir sekilde giris yapildi");
+        Driver.closeDriver();
 
 
     }

@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import tests.utilities.Driver;
 import tests.utilities.TestBaseBeforeAfterMethod;
 
 public class C03_SoftAssert extends TestBaseBeforeAfterMethod {
@@ -29,5 +30,6 @@ public class C03_SoftAssert extends TestBaseBeforeAfterMethod {
         softAssert.assertTrue(resultWE.getText().contains("Nutella"),"Nutella icermiyor");
         softAssert.assertAll();
         System.out.println("Hatavarsa burasi calismaz");
+        Driver.closeDriver();
     }
 }
