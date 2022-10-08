@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import tests.utilities.Driver;
 import tests.utilities.TestBaseBeforeAfterMethod;
 
-public class C02_SoftAssert extends TestBaseBeforeAfterMethod {
+public class C02_HardAssert extends TestBaseBeforeAfterMethod {
     // Hard Assertions : JUNit'te öğrendiğimiz assertion ile aynıdır.
     // Assert.assertTrue();  Assert.assertFalse();  Assert.assertEquals();
     // Hard Assertions'da herhangi bir assertion failed olursa,

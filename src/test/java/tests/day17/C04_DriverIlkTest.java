@@ -12,6 +12,7 @@ public class C04_DriverIlkTest {
          */
         Driver.getDriver().get("https://www.amazon.com");
         Driver.getDriver().get("https://www.bestbuy.com");
+        Driver.closeDriver();
         Driver.getDriver().get("https://www.hepsiburada.com");
         Driver.closeDriver();
     }

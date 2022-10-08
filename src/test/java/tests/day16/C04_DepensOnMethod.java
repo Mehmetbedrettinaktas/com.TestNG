@@ -5,13 +5,15 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import tests.utilities.TestBaseBeforeAfterMethod;
+import tests.utilities.TastBaseBeforeClassAfterClass;
 
-public class C04_DepensOnMethod extends TestBaseBeforeAfterMethod {
+
+public class C04_DepensOnMethod extends TastBaseBeforeClassAfterClass {
     @Test
     public void test1() {
         // amazon ana sayfasina gidin
         driver.get("https://www.amazon.com");
+        // "https://www.aamazon1.com" yaptigimizda test1 failed oldugu icin test2 ve test3 calismadigi icin ignord olur
     }
 
     @Test(dependsOnMethods = "test1")

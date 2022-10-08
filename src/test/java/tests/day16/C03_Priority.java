@@ -1,9 +1,10 @@
 package tests.day16;
 
 import org.testng.annotations.Test;
-import tests.utilities.TestBaseBeforeAfterMethod;
+import tests.utilities.TastBaseBeforeClassAfterClass;
 
-public class C03_Priority extends TestBaseBeforeAfterMethod {
+
+public class C03_Priority extends TastBaseBeforeClassAfterClass {
     // Testlerimizi calistirirken istedigimiz siraya gore calismasini istersek
     // priority methodunu kullaniriz.
     // (When we run our tests, if we want them to run in the order we want, we use the priority method.)

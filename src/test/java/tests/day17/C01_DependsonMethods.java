@@ -6,7 +6,7 @@ import tests.utilities.TestBaseBeforeAfterMethod;
 public class C01_DependsonMethods extends TestBaseBeforeAfterMethod {
     @Test
     public void test01() {
-        driver.get("https://www.wamazon1.com");
+        driver.get("https://www.amazon.com");
     }
     @Test(dependsOnMethods = "test01")
     public void test02() {
