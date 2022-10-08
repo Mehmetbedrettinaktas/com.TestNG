@@ -14,6 +14,7 @@ public class C01_BeforeMethodAfterMethod extends TestBaseBeforeAfterMethod {
     public void bestBuyTesti() {
         driver.get("https://www.testbuy.com");
     }
+
     @Test
     public void techproeducationTesti() {
         driver.get("https://www.techproeducation.com");
