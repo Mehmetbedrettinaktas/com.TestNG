@@ -12,17 +12,17 @@ public class C03_SoftAssert extends TestBaseBeforeAfterMethod {
     @Test
     public void test01() {
 
-        SoftAssert softAssert=new SoftAssert();
+        SoftAssert softAssert = new SoftAssert();
 
         //1-amazon anasayfaya gidin
         driver.get("https://www.amazon.com");
         driver.navigate().refresh();
 
         //2-title in Amazon içerdigini test edin
-        softAssert.assertTrue(driver.getTitle().contains("Amazon"),"aradiginiz kelimeyi icermiyor");
+        softAssert.assertTrue(driver.getTitle().contains("Amazon"), "aradiginiz kelimeyi icermiyor");
 
         //3-arama kutusnun erişilebilir oldugunu tets edin
-        WebElement aramaKutusu= driver.findElement(By.id("twotabsearchtextbox"));
+        WebElement aramaKutusu = driver.findElement(By.id("twotabsearchtextbox"));
         softAssert.assertTrue(aramaKutusu.isEnabled());
 
         //4-arama kutusuna Nuella yazıp aratın
@@ -33,9 +33,17 @@ public class C03_SoftAssert extends TestBaseBeforeAfterMethod {
         softAssert.assertTrue(resultWE.isDisplayed());
 
         //6-arama sonucunun Nutella içerdigini test edin
-        softAssert.assertTrue(resultWE.getText().contains("Nutella"),"Nutella icermiyor");
+        softAssert.assertTrue(resultWE.getText().contains("Nutella"), "Nutella icermiyor");
         softAssert.assertAll();
         System.out.println("Hatavarsa burasi calismaz");
         Driver.closeDriver();
+
+         /*
+ Hard Assertions : JUNit'te öğrendiğimiz assertion ile aynıdır.  Assert.assertTrue();  Assert.assertFalse();  Assert.assertEquals();
+ Hard Assertions'da herhangi bir assertion failed olursa, test method'un çalışmasını durdurur ve kalan kodları yürütmez.(stop execution)
+Soft Assert : Kullanabilmek için obje oluştururuz, oluşturduktan sonra obje ismi ile kullanırız, Herhangi bir hata verdiğinde test methodu
+çalışmaya devam eder, en sonra rapor verir.    baslangıc  SoftAssert objeadı=new SoftAssert();  bitis objeadı.assertAll();
+  */
+
     }
 }
